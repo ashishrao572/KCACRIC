@@ -1,0 +1,154 @@
+/* src/App.css */
+html, body, #root, .App {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+}
+
+.App {
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+/* Header */
+.App-header {
+  display: flex;
+  background: linear-gradient(to right,#014161, #014161);
+  padding: 10px 20px;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  position: fixed;
+  z-index: 1000; /* Ensure header is above other content */
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  height: 40px;
+}
+
+.logo span {
+  text-shadow: 0 0 20px #b3e6ff, 0 0 20px #b3e6ff;
+  animation: glow 4s infinite;
+  font-weight: 520;
+}
+
+/* Glow Effect */
+@keyframes glow {
+  0%, 100% {
+    text-shadow: 0 0 20px #001f3f, 0 0 40px #001f3f;
+    color: #f1f2f3;
+  }
+  50% {
+    text-shadow: 0 0 20px white, 0 0 40px rgb(252, 246, 140);
+    color: #0ff3e3;
+  }
+}
+
+/* Nav Styles */
+.App-nav {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-link {
+  color: #3cdefa;
+  text-decoration: none;
+  border-bottom: 3px solid transparent;
+  padding: 5px 0;
+  transition: border-color 0.3s;
+}
+
+.nav-link span {
+  color: #f8f9f9;
+}
+
+.nav-link:hover {
+  border-bottom: 3px solid #ffffff;
+}
+
+.nav-link.active {
+  border-bottom: 3px solid #005f8f;
+}
+
+/* Hamburger Icon */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.hamburger .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  transition: 0.3s;
+}
+
+/* Open state */
+.hamburger .bar.open:nth-child(1) {
+  transform: rotate(45deg) translateY(8px);
+}
+
+.hamburger .bar.open:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger .bar.open:nth-child(3) {
+  transform: rotate(-45deg) translateY(-8px);
+}
+
+/* Mobile Responsive Navigation */
+@media (max-width: 768px) {
+  .App-nav {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    flex-direction: column;
+    background-color: #014161;
+    width: 100%;
+    display: none;
+    padding: 20px;
+  }
+
+  .App-nav.open {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+
+/* Main content */
+.App-main {
+  flex: 1;
+  margin-top: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #d0ebf8, #d7f0fd, #d0ebf8);
+  color: white;
+}
+
+/* Responsive header and main padding */
+@media (max-width: 768px) {
+  .App-header {
+    padding: 8px 10px;
+  }
+  .App-main {
+    padding-top: 64px;    /* slightly less for mobile header */
+    padding-bottom: 48px; /* slightly less for mobile footer */
+  }
+}
