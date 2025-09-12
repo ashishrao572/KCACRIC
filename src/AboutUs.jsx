@@ -25,7 +25,7 @@ function AboutUs() {
     <div className="about-us-container">
       {/* Intro Section */}
       <section className="intro">
-        <h1>About VSA</h1>
+        <h1>About KCACRIC</h1>
         <p>
           We’re at the nexus of CAE development, Customization, and Artificial Intelligence. We help enable what’s next.
         </p>

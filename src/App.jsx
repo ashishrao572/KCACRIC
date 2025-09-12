@@ -20,8 +20,8 @@ function App() {
         <header className="App-header fixed top-0 left-0 right-0 w-full">
           {/* Logo */}
           <div className="logo">
-            <img src="/resrc/VSA_Logo.png" alt="VSA Logo" />
-            <span>Always Ahead</span>
+            <img src="/resrc/kcacric.png" alt="kcacric Logo" />
+            <span>Perfect गेंद!</span>
           </div>
 
           {/* Hamburger Icon */}

@@ -121,58 +121,22 @@ export default function Home() {
         }`}
         style={{
           paddingTop: "0px",
-          marginTop: "0px",
-          height: "100vh",
+          marginTop: "0px"
         }}
-      >
-        {sections.map(({ id, component, color }, index) => {
-          const SectionComponent = componentMap[component];
-          return (
-            <section
-              key={id}
-              ref={(el) => (sectionRefs.current[index] = el)}
-              data-index={index}
-              className={`${
-                isMobile ? "" : "snap-start"
-              } flex items-center justify-center text-4xl font-bold transition-opacity duration-500 ease-in-out ${color}`}
-              style={{
-                minHeight: isMobile ? "auto" : "100vh",
-                padding: isMobile ? "2rem 0rem" : "0",
-              }}
-            >
-              {SectionComponent && <SectionComponent />}
-            </section>
-          );
-        })}
+    >
+      <div>
+      <h1 className="show" style={{fontSize: 250,
+        color:"#014161",
+      }}>
+        <span>KCA Cricket</span>
+        </h1>
+              <h1 className="show" style={{fontSize: 200,
+                color:"#014161",
+              }}>
+        <ui>जल्द आ रहा है!</ui>
+        </h1>
+      </div>
       </main>
-
-      {/* Vertical Scroll Dots - Hidden on Mobile */}
-      {!isMobile && (
-        <div className="fixed right-0 top-1/2 -translate-y-1/2 flex flex-col gap-5 pr-5 z-50">
-          {sections.map(({ id, label }, index) => (
-            <div className="relative group" key={id}>
-              <button
-                aria-label={`Scroll to ${label} section`}
-                tabIndex="0"
-                onClick={() => scrollToSection(index)}
-                className="w-4 h-4 rounded-full transition-all duration-300"
-                style={{
-                  backgroundColor:
-                    activeIndex === index ? "#7ac0e8" : "#9cdeff",
-                  border:
-                    activeIndex === index
-                      ? "2px solid #3b82f6"
-                      : "2px solid transparent",
-                  opacity: activeIndex === index ? 1 : 0.5,
-                }}
-              />
-              <span className="absolute right-6 top-1/2 -translate-y-1/2 scale-0 group-hover:scale-100 transition bg-white text-gray-800 text-xs px-2 py-1 rounded shadow">
-                {label}
-              </span>
-            </div>
-          ))}
-        </div>
-      )}
     </div>
   );
 }
