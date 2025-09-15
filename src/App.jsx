@@ -21,7 +21,7 @@ function App() {
           {/* Logo */}
           <div className="logo">
             <img src="/resrc/kcacric.png" alt="kcacric Logo" />
-            <span>Perfect गेंद!</span>
+            <span>Dream Big! Play Cricket!</span>
           </div>
 
           {/* Hamburger Icon */}
@@ -34,8 +34,8 @@ function App() {
           {/* Navigation Menu */}
           <nav className={`App-nav ${menuOpen ? 'open' : ''}`}>
             <NavLink to="/" onClick={closeMenu} className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}><span>Home</span></NavLink>
-            <NavLink to="/about" onClick={closeMenu} className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}><span>About Us</span></NavLink>
-            <NavLink to="/services" onClick={closeMenu} className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}><span>Services</span></NavLink>
+            {/*<NavLink to="/about" onClick={closeMenu} className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}><span>About Us</span></NavLink>
+            <NavLink to="/services" onClick={closeMenu} className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}><span>Services</span></NavLink>*/}
             <NavLink to="/contact" onClick={closeMenu} className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}><span>Contact</span></NavLink>
           </nav>
         </header>
@@ -49,8 +49,8 @@ function App() {
         >
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/about" element={<AboutUs />} />
-            <Route path="/services" element={<Services />} />
+            {/*<Route path="/about" element={<AboutUs />} />
+            <Route path="/services" element={<Services />} />*/}
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </main>

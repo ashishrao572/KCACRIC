@@ -25,9 +25,12 @@ function AboutUs() {
     <div className="about-us-container">
       {/* Intro Section */}
       <section className="intro">
-        <h1>About KCACRIC</h1>
+        <h1>Kushinagar Cricket Academy</h1>
+        <h3>Gaon se talent niklega, desh ke liye khelega!</h3>
         <p>
-          We’re at the nexus of CAE development, Customization, and Artificial Intelligence. We help enable what’s next.
+          Rising Strikers Cricket Academy brings professional cricket training to rural India. 
+          Yahaan milti hai sahi coaching, discipline, aur wo push jo chhoti jagah ke sapno ko bada banata hai. 
+          Agar cricket ka junoon hai, toh yeh jagah sirf aapke liye hai!
         </p>
       </section>
 
@@ -35,28 +38,24 @@ function AboutUs() {
       <div className="split-section responsive-row">
         <div className="split-text" ref={ref}>
           <div className="text-content">
-            <h2>Our Vision</h2>
-            <p>
-              To redefine industry standards through innovation, enabling businesses and individuals to unlock their full potential with cutting-edge technology.
-            </p>
+            <h2>Batting Mastery</h2>
+            <p>Learn proper stance, footwork, and stroke selection from our experienced coaches.</p>
           </div>
         </div>
         <div className="split-image">
-          <img src="/resrc/OurVision.png" alt="Our Vision" />
+          <img src="/resrc/BattingMastery.png" alt="Our Vision" />
         </div>
       </div>
 
       {/* Mission Section - reversed */}
       <div className="split-section responsive-row">
         <div className="split-image">
-          <img src="/resrc/OurMission.png" alt="Our Mission" />
+          <img src="/resrc/BowlingPrecision.png" alt="Our Mission" />
         </div>
         <div className="split-text" ref={ref}>
           <div className="text-content">
-            <h2>Our Mission</h2>
-            <p>
-              We strive to deliver excellence by developing state-of-the-art solutions, ensuring sustainability, efficiency, and growth across industries.
-            </p>
+            <h2>Bowling Precision</h2>
+            <p>Master different bowling techniques and strategies to outsmart batsmen.</p>
           </div>
         </div>
       </div>

@@ -5,9 +5,9 @@ function Portfolio() {
   const portfolioArr = [
     {
       id: 1,
-      name: 'PLM Implementation',
+      name: 'Batting Mastery',
       image: '/resrc/PLM_Implementation.jpg',
-      tagline: 'Expert guidance and support for seamless PLM system implementation.',
+      tagline: 'Learn proper stance, footwork, and stroke selection from our experienced coaches.',
       review: `We help organizations implement robust PLM (Product Lifecycle Management) systems that streamline processes, enhance data visibility, and improve collaboration across departments. Whether it's a greenfield implementation or an enterprise-wide rollout, our structured approach ensures minimal disruption, faster ROI, and a scalable foundation for future growth.
 
 Our PLM implementation services cover:

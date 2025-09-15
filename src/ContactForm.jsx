@@ -15,7 +15,7 @@ function ContactForm() {
 
   return (
   <div className="contact-form">
-    <h2>Send Us a Message</h2>
+    <h2>Register Now!</h2>
     <form onSubmit={handleSubmit}>
       <div className="form-row">
         <div className="form-group">
@@ -39,7 +39,7 @@ function ContactForm() {
       <div className="form-group">
         <textarea name="message" placeholder="Type your message here..." value={formData.message} onChange={handleChange} rows="5" required></textarea>
       </div>
-      <button type="submit">Send Message</button>
+      <button type="submit">Submit</button>
     </form>
   </div>
   );

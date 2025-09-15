@@ -5,6 +5,7 @@ import PortfolioSection from "./PortfolioSection";
 import IndustriesWeServe from "./IndustrySection";
 import WhyUs from "./WhyUs";
 import WhatWeDo from "./WhatWeDo";
+import AboutUs from "./AboutUs";
 import "./Home.css";
 
 // Section Components
@@ -125,16 +126,7 @@ export default function Home() {
         }}
     >
       <div>
-      <h1 className="show" style={{fontSize: 250,
-        color:"#014161",
-      }}>
-        <span>KCA Cricket</span>
-        </h1>
-              <h1 className="show" style={{fontSize: 200,
-                color:"#014161",
-              }}>
-        <ui>जल्द आ रहा है!</ui>
-        </h1>
+        <AboutUs />
       </div>
       </main>
     </div>

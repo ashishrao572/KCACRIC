@@ -16,7 +16,7 @@ html, body, #root, .App {
 /* Header */
 .App-header {
   display: flex;
-  background: linear-gradient(to right,#014161, #014161);
+  background: linear-gradient(to right,#9C5455, #d47476,#9C5455);
   padding: 10px 20px;
   justify-content: space-between;
   align-items: center;
@@ -37,7 +37,7 @@ html, body, #root, .App {
 }
 
 .logo span {
-  text-shadow: 0 0 20px #b3e6ff, 0 0 20px #b3e6ff;
+  text-shadow: 0 0 20px #faf5e9, 0 0 20px #faf5e9;
   animation: glow 4s infinite;
   font-weight: 520;
 }
@@ -50,7 +50,7 @@ html, body, #root, .App {
   }
   50% {
     text-shadow: 0 0 20px white, 0 0 40px rgb(252, 246, 140);
-    color: #0ff3e3;
+    color: white;
   }
 }
 
@@ -69,15 +69,15 @@ html, body, #root, .App {
 }
 
 .nav-link span {
-  color: #f8f9f9;
+  color: white;
 }
 
 .nav-link:hover {
-  border-bottom: 3px solid #ffffff;
+  border-bottom: 3px solid #f5d686;
 }
 
 .nav-link.active {
-  border-bottom: 3px solid #005f8f;
+  border-bottom: 3px solid #8f2c2d;
 }
 
 /* Hamburger Icon */
@@ -92,7 +92,7 @@ html, body, #root, .App {
 .hamburger .bar {
   width: 25px;
   height: 3px;
-  background-color: #fff;
+  background-color: #f5eddb;
   transition: 0.3s;
 }
 
@@ -116,7 +116,7 @@ html, body, #root, .App {
     top: 60px;
     right: 0;
     flex-direction: column;
-    background-color: #014161;
+    background-color: #9C5455;
     width: 100%;
     display: none;
     padding: 20px;
@@ -138,7 +138,7 @@ html, body, #root, .App {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(to right, #d0ebf8, #d7f0fd, #d0ebf8);
+  background: linear-gradient(to right, #f5eddb, #faf5e9, #f5eddb);
   color: white;
 }
 
