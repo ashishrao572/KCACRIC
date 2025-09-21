@@ -1,9 +1,9 @@
-// src/App.jsx
 import { BrowserRouter as Router, Route, Routes, NavLink } from 'react-router-dom';
 import { useState } from 'react';
 import Home from './Home';
 import AboutUs from './AboutUs';
-import Services from './Services';
+import TrainingPrograms from "./TrainingPrograms";
+import Join from "./Join";
 import Contact from './Contact';
 import './App.css';
 import Footer from './Footer';
@@ -34,8 +34,9 @@ function App() {
           {/* Navigation Menu */}
           <nav className={`App-nav ${menuOpen ? 'open' : ''}`}>
             <NavLink to="/" onClick={closeMenu} className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}><span>Home</span></NavLink>
-            {/*<NavLink to="/about" onClick={closeMenu} className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}><span>About Us</span></NavLink>
-            <NavLink to="/services" onClick={closeMenu} className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}><span>Services</span></NavLink>*/}
+            <NavLink to="/about" onClick={closeMenu} className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}><span>About</span></NavLink>
+            <NavLink to="/programs" onClick={closeMenu} className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}><span>Programs</span></NavLink>
+            <NavLink to="/join" onClick={closeMenu} className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}><span>Join</span></NavLink>
             <NavLink to="/contact" onClick={closeMenu} className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}><span>Contact</span></NavLink>
           </nav>
         </header>
@@ -48,10 +49,11 @@ function App() {
           }}
         >
           <Routes>
-            <Route path="/" element={<Home />} />
-            {/*<Route path="/about" element={<AboutUs />} />
-            <Route path="/services" element={<Services />} />*/}
-            <Route path="/contact" element={<Contact />} />
+            <Route path="/" element={<Home/>} />
+            <Route path="/about" element={<AboutUs/>} />
+            <Route path="/programs" element={<TrainingPrograms/>}/>
+            <Route path="/Join" element={<Join/>} />
+            <Route path="/contact" element={<Contact/>} />
           </Routes>
         </main>
 

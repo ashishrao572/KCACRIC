@@ -43,6 +43,7 @@
   justify-content: flex-start;
   box-shadow: #b4b4b4 0px 4px 6px -1px;
 }
+
 .contact-info h2 {
   font-weight: 600;
 }
@@ -125,5 +126,4 @@
   .contact-form textarea {
     height: 120px;
   }
-
 }

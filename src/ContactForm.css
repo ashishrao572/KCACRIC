@@ -2,16 +2,17 @@
   width: 100%;
   margin: auto;
   text-align: center;
-  background-color: #9C5455;
-  color: #000;
+  background-color: white;
+  color: #461112;
   padding: 3%; /* use % for responsiveness */
   border-radius: 8px;
+  border-color: #f1797b;
   box-sizing: border-box;
   box-shadow: #b4b4b4 0px 4px 6px -1px;
 }
 
 .contact-form h2 {
-  color: #000;
+  color: #461112;
   font-size: 2rem;
   margin-bottom: 1rem;
 }
@@ -40,7 +41,9 @@
   width: 100%;
   padding: 12px;
   border-radius: 6px;
-  border: 1px solid #ccc;
+  border: 1px solid #cc3134;
+  background-color: #e0d6d6;
+  color:#461112;
   font-size: 1rem;
   box-sizing: border-box;
 }
@@ -48,7 +51,7 @@
 /* Submit button styling */
 button[type="submit"] {
   padding: 12px 20px;
-  background-color: #0078d7;
+  background-color: #9C5455;
   color: white;
   border: none;
   border-radius: 6px;
@@ -58,7 +61,7 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
-  background-color: #005fa3;
+  background-color: #b95557;
 }
 
 /* 📱 Responsive layout */

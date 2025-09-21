@@ -1,134 +1,51 @@
-import React, { useEffect, useRef, useState } from "react";
-import ContactForm from "./ContactForm";
-import Overview from "./Overview";
-import PortfolioSection from "./PortfolioSection";
-import IndustriesWeServe from "./IndustrySection";
-import WhyUs from "./WhyUs";
-import WhatWeDo from "./WhatWeDo";
-import AboutUs from "./AboutUs";
+import { Link } from "react-router-dom";
 import "./Home.css";
 
-// Section Components
-const ContactFormSection = () => (
-  <div className="w-full md:w-2/4 h-auto md:h-1/2 px-4 py-8 flex justify-center items-center">
-    <ContactForm />
-  </div>
-);
-
-const OverviewSection = () => <Overview/>;
-
-const WhatSection = () => ( <div className="pt-16 justify-center items-center">
-    <WhatWeDo />
-  </div>
-);
-
-const WhySection = () => ( <div className="pt-16 justify-center items-center">
-    <WhyUs/>
-  </div>
-);
-
-const IndustrySection = () => (
-  <div className="w-4/5 min-h-screen flex flex-col pt-16 justify-center items-center">
-    <IndustriesWeServe />
-  </div>
-);
-
-const PortfolioSectionLayout = () => (
-  <div className="w-full flex flex-col items-center justify-center">
-    {/* Title - Responsive */}
-    <h2 className="text-2xl md:text-3xl font-semibold text-center text-black-600 mb-8">
-      Our Services
-    </h2>
-    <div className="w-[200px] h-1 mx-auto bg-gradient-to-r from-blue-700 via-white via-cyan-300 to-blue-900 rounded-full mb-6"/>
-    {/* Portfolio Grid */}
-    <div className="w-full md:w-8/10">
-      <PortfolioSection />
-    </div>
-  </div>
-);
-
-
-// Map of component wrappers
-const componentMap = {
-  OverviewSection,
-  WhatSection,
-  WhySection,
-  IndustrySection,
-  PortfolioSectionLayout,
-  ContactFormSection,
-};
-
-// Section definitions
-const sections = [
-  { id: "overview", label: "Overview", component: "OverviewSection", color: "text-white" },
-  { id: "WhatWe", label: "What we do", component: "WhatSection", color: "text-white" },
-  { id: "WhyUs", label: "Why Us", component: "WhySection", color: "text-white" },
-  { id: "Industry", label: "Industries", component: "IndustrySection", color: "text-gray-800" },
-  { id: "Services", label: "Services", component: "PortfolioSectionLayout", color: "text-gray-900" },
-  { id: "contact", label: "Contact", component: "ContactFormSection", color: "text-white" },
-];
-
-function useMediaQuery(query) {
-  const [matches, setMatches] = useState(false);
-
-  useEffect(() => {
-    const media = window.matchMedia(query);
-    const update = () => setMatches(media.matches);
-    update();
-    media.addEventListener("change", update);
-    return () => media.removeEventListener("change", update);
-  }, [query]);
-
-  return matches;
-}
-
 export default function Home() {
-  const sectionRefs = useRef([]);
-  const [activeIndex, setActiveIndex] = useState(0);
-  const isMobile = useMediaQuery("(max-width: 768px)");
-
-  // Scroll to specific section
-  const scrollToSection = (index) => {
-    sectionRefs.current[index]?.scrollIntoView({ behavior: "smooth" });
-  };
-
-  // Observe which section is in view
-  useEffect(() => {
-    if (isMobile) return;
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActiveIndex(Number(entry.target.dataset.index));
-          }
-        });
-      },
-      { threshold: 0.6 }
-    );
-
-    sectionRefs.current.forEach((ref) => {
-      if (ref) observer.observe(ref);
-    });
-
-    return () => observer.disconnect();
-  }, [isMobile]);
-
   return (
     <div className="relative w-full overflow-hidden">
-      <main
-        className={`overflow-y-scroll scroll-smooth no-scrollbar ${
-          isMobile ? "" : "snap-y snap-mandatory"
-        }`}
-        style={{
-          paddingTop: "0px",
-          marginTop: "0px"
-        }}
-    >
-      <div>
-        <AboutUs />
-      </div>
-      </main>
+      <section
+        className="relative w-full h-screen bg-cover bg-center"
+        style={{ backgroundImage: 'url("/resrc/home.png")' }}
+      >
+        {/* Dark overlay */}
+        <div className="absolute inset-0 bg-black opacity-50"></div>
+
+        {/* Hero content */}
+        <div className="relative z-10 flex flex-col items-center justify-center h-full px-4 md:flex-row md:space-x-10 text-white">
+          
+          {/* Logo */}
+          <div className="mb-6 md:mb-0">
+            <img
+              src="/resrc/kcacric.png"
+              alt="Cricket Academy Logo"
+              className="w-60 h-60 md:w-80 md:h-80 object-contain"
+            />
+          </div>
+
+          {/* Text + Buttons */}
+          <div className="text-center md:text-left">
+            <h1 className="text-4xl md:text-6xl font-bold">
+              Kushinagar Cricket Academy!
+            </h1>
+            <p className="text-lg md:text-2xl mt-4">
+              Gaon ka talent, desh ka future!
+            </p>
+            <div className="mt-6 flex flex-col items-center space-y-4 md:flex-row md:space-y-0 md:space-x-4 md:items-start">
+              <Link to="/join">
+                <button className="bg-yellow-500 text-black py-2 px-6 rounded-md text-xl hover:bg-yellow-600">
+                  Join Now
+                </button>
+              </Link>
+              <Link to="/contact">
+                <button className="bg-transparent border-2 border-white py-2 px-6 rounded-md text-xl text-white hover:bg-white hover:text-black">
+                  Book a Visit
+                </button>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
